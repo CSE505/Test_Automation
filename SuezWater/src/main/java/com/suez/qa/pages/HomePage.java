@@ -4,5 +4,7 @@ import com.suez.qa.base.SuezBase;
 
 public class HomePage extends SuezBase {
 	
+	//Page Factory - OR:
+	
 
 }

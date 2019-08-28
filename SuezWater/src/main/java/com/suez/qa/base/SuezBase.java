@@ -14,8 +14,8 @@ import com.suez.qa.util.SuezUtil;
 
 public class SuezBase {
 
-	static WebDriver driver;
-	static Properties prop;
+	public static WebDriver driver;
+	public static Properties prop;
 
 	public SuezBase() {
 
@@ -30,21 +30,21 @@ public class SuezBase {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void initilization() {
 		String browserName = prop.getProperty("browser");
-		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "E:\\chromedriver_win32\\chromedriver.exe");	
+		if (browserName.equals("chrome")) {
+			System.setProperty("webdriver.chrome.driver", "E:\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
-		}else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", "E:\\geckodriver-v0.24.0-win64\\geckodriver.exe");	
-			driver = new FirefoxDriver(); 
+		} else if (browserName.equals("FF")) {
+			System.setProperty("webdriver.gecko.driver", "E:\\geckodriver-v0.24.0-win64\\geckodriver.exe");
+			driver = new FirefoxDriver();
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(SuezUtil.page_Load_Timeout,TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(SuezUtil.implicit_Load_Timeout,TimeUnit.SECONDS);
-		
+		driver.manage().timeouts().pageLoadTimeout(SuezUtil.page_Load_Timeout, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(SuezUtil.implicit_Load_Timeout, TimeUnit.SECONDS);
+
 		driver.get(prop.getProperty("Url"));
 	}
 

@@ -25,6 +25,14 @@ public class RegistrationPage extends SuezBase {
 
 	// Actions
 	
+	public ResidentialPage Residential () {
+		Residential.click();
+		return new ResidentialPage();		
+	}
 	
+	public BusinessPage Business () {
+		Business.click();
+		return new BusinessPage();
+	}
 
 }

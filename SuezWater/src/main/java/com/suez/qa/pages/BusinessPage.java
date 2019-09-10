@@ -6,5 +6,6 @@ public class BusinessPage extends SuezBase {
 	
 	// Page Factory - OR:
 	
+	
 
 }

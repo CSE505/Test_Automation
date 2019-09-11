@@ -2,6 +2,7 @@ package com.suez.qa.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import com.suez.qa.base.SuezBase;
 
@@ -29,6 +30,17 @@ public class LoginPage extends SuezBase {
 	
 	@FindBy(xpath = ".//a[@href='/guest-checkout']")
 	WebElement ContinueAsGuest;
+	
+	
+	//Initializing the Page Objects:
+	
+		public LoginPage(){
+			PageFactory.initElements(driver, this);
+		}
+		
+	//Actions
+		
+		
 	
 	
 

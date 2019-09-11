@@ -25,12 +25,12 @@ public class HomePage extends SuezBase {
 
 	// Actions
 	
-	public LoginPage SignIn () {
+	public LoginPage ClickOnSignInLink () {
 		sign_btn.click();
 		return new LoginPage();		
 	}
 	
-	public RegistrationPage Register() {
+	public RegistrationPage ClickOnRegisterLink() {
 		Register_btn.click();
 		return new RegistrationPage();
 	}

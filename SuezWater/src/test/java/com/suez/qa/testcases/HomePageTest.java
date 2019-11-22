@@ -18,17 +18,9 @@ public class HomePageTest extends SuezBase {
 	public HomePageTest() {
 		super();
 	}
-	
 	@BeforeMethod
-	public void BeforeMethod() {
-		
-	}
 	
-	@Test
-	public void ValidateSignInLink() {
-		
-	}
-		
+	
 	@Test
 	public void ClickOnSignInLink(){
 		loginPage = homePage.ClickOnSignInLink();

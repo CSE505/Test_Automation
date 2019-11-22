@@ -10,7 +10,7 @@ import com.suez.qa.pages.LoginPage;
 import com.suez.qa.util.SuezUtil;
 
 public class HomePageTest extends SuezBase {
-	
+
 	LoginPage loginPage;
 	HomePage homePage;
 	SuezUtil suezUtil;
@@ -18,11 +18,21 @@ public class HomePageTest extends SuezBase {
 	public HomePageTest() {
 		super();
 	}
+
 	@BeforeMethod
-	
-	
+	public void setUp() {
+		initilization();
+		suezUtil = new SuezUtil();
+		loginPage = new LoginPage();
+	}
+
 	@Test
-	public void ClickOnSignInLink(){
+	public void VerifyRegisterLinkTest() {
+
+	}
+
+	@Test
+	public void VerifySignInLinkTest() {
 		loginPage = homePage.ClickOnSignInLink();
 	}
 
